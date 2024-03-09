@@ -1,1 +1,16 @@
-Para Abrir um arquivo do react 
+Para Abrir um arquivo do react em NEXT.js
+
+1. npx create-next-app@latest
+
+2. Y
+
+3. Da o nome do arquivo para o projeto
+
+4. Typescript yes
+4.1 eslint no 
+4.2 tailwind yes
+4.3 src/directory yes
+4.4 app router yes
+4.5 import alias no
+
+5. npm run dev 
