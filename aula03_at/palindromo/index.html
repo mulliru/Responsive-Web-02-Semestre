@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Palíndromo</title>
+</head>
+<body>
+    <h2>Verificador de Palíndromo</h2>
+    <label for="inputText">Insira uma palavra ou texto:</label>
+    <input type="text" id="inputText">
+    <button onclick="checkPalindrome()">Verificar</button>
+    <p id="result"></p>
+
+    <script>
+        function checkPalindrome() {
+            const inputText = document.getElementById('inputText').value.toLowerCase().replace(/[^a-z0-9]/g, '');
+            const reversedText = inputText.split('').reverse().join('');
+
+            const resultElement = document.getElementById('result');
+
+            if (inputText === reversedText) {
+                resultElement.textContent = 'É um palíndromo!';
+            } else {
+                resultElement.textContent = 'Não é um palíndromo.';
+            }
+        }
+        /*
+            Palavras:
+                ovo, arara, radar, reviver, ata, ele, asa
+            
+            Frases (desconsiderando espaços, pontuações e maiúsculas/minúsculas):
+            "Ame o poema."
+            "A mala nada na lama."
+            "A cara rajada da jararaca."
+            "Anotaram a data da maratona."
+            "Luza Rocelina, a namorada do Manuel, leu na moda da Romana: 'Anil é cor azul.'"
+            "Socorram-me, subi no ônibus em Marrocos."
+        */
+
+    </script>
+</body>
+</html>

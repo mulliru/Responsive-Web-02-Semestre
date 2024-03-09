@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Somar(){
+            // parseFloat() - converte strings para valores reais
+            // parseInt() -  converte strings para valores inteiros
+            // eval - converte string para valores numéricos, respeitando o tipo
+            var valor1 = parseFloat(document.getElementById("valor1").value);
+            var valor2 = parseFloat(document.getElementById("valor2").value);
+            var result = document.getElementById("result");
+            var soma = 0;
+            soma = valor1 + valor2;
+            //alert(soma);
+
+            // innerHTML - insere texto com elementos HTML
+            // innerText - insere somente texto dentro de um elemento
+            result.innerText = soma ;
+
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <div>
+            <label for="valor1">Valor 1: <input type="number" step="0.1" id="valor1"></label>
+        </div>
+        <div>
+            <label for="valor2">Valor 2: <input type="number" id="valor2"></label><br/>
+        </div>
+        <div>Resultado: <span id="result"></span></div>
+        <button type="button" id="btnCalcular" onclick="Somar()">Calcular</button>
+    </form>
+</body>
+</html>

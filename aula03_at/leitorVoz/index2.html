@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Leitura de Página com speechSynthesis</title>
+    </head>
+
+    <body onload="lerConteudoDaPagina()">
+        <h1>Exemplo de Leitura de Página com speechSynthesis</h1>
+        <p>Este é um parágrafo de exemplo que será lido em voz alta pelo navegador.</p>
+        <p>Mais um parágrafo para demonstração.</p>
+        <button onclick="lerConteudoDaPagina()">Ler Conteúdo da Página</button>
+        <button onclick="pausarLeitura()">Pausar Leitura</button>
+        <button onclick="reiniciarLeitura()">Reiniciar Leitura</button>
+        <button onclick="pararLeitura()">Parar Leitura</button>
+        <script>
+
+            // Função para ler todo o conteúdo da página
+            function lerConteudoDaPagina() {
+                // Obtém todos os elementos de texto na página
+                var elementosDeTexto = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, span, a, li');
+
+                // Concatena o texto de cada elemento
+                var textoCompleto = "";
+                elementosDeTexto.forEach(function (elemento) {
+                    textoCompleto += elemento.textContent + " ";
+                });
+
+                // Cria um novo objeto SpeechSynthesisUtterance
+                var utterance = new SpeechSynthesisUtterance(textoCompleto);
+                
+                // Configura a taxa de fala e o tom
+                utterance.rate = 1; // Taxa de fala (de 0 a 10, onde 1 é normal)
+                utterance.pitch = 1; // Tom (de 0 a 2, onde 1 é normal)
+
+                // Seleciona uma voz específica (se disponível)
+                var voices = speechSynthesis.getVoices();
+                if (voices.length > 0) {
+                    utterance.voice = voices[1]; // Seleciona a primeira voz da lista
+                }
+
+                // Inicia a síntese de fala
+                window.speechSynthesis.speak(utterance);
+            }
+
+            // Função para pausar a leitura
+            function pausarLeitura() {
+                window.speechSynthesis.pause();
+            }
+
+            // Função para reiniciar a leitura a partir do início
+            function reiniciarLeitura() {
+                window.speechSynthesis.resume();
+                window.speechSynthesis.cancel();
+                lerConteudoDaPagina();
+            }
+
+            // Função para parar a leitura
+            function pararLeitura() {
+                window.speechSynthesis.cancel();
+            }
+
+           
+        </script>
+    </body>
+
+</html>

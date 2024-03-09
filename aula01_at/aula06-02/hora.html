@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var minhaVar = setInterval(minhaHora,1000)
+        function minhaHora(){
+            var d = new Date();
+            var data = d.toLocaleDateString();
+            var hora = d.toLocaleTimeString();
+
+            document.getElementById("data").innerText = data; 
+            document.getElementById("hora").innerText = hora; 
+        }
+        //window.onload = minhaHora;
+    </script>
+</head>
+<body>
+    <p>Data: <span id="data"></span></p>
+    <p>Hora: <span id="hora"></span></p>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #minhaDiv{
+            display: none;
+            padding:20px;
+            background-color: blueviolet;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function ExibirEsconder(){
+            var minhaDiv = document.getElementById("minhaDiv");
+            minhaDiv.style.display = (minhaDiv.style.display === 'none' || minhaDiv.style.display === '') ? 'block' : 'none';
+        }
+    </script>
+</head>
+<body>
+    <button onclick="ExibirEsconder()">Exibir / Esconder</button>
+    <div id="minhaDiv">
+        <p>Esta div será exibida ou escondida!</p>
+    </div>
+</body>
+</html>
