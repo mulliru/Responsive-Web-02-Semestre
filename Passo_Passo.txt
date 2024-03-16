@@ -14,3 +14,5 @@ Para Abrir um arquivo do react em NEXT.js
 4.5 import alias no
 
 5. npm run dev 
+
+6. npm install node
