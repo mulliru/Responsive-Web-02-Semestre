@@ -15,10 +15,6 @@ Para Abrir um arquivo do react em NEXT.js
 
 5. npm run dev 
 
-<<<<<<< HEAD
 6. npm install node
-=======
-6. npm install node 
 
 
->>>>>>> 17a4b1437df243a4671b9af7850730c6728b88cb
