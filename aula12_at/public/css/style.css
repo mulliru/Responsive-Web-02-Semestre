@@ -1,0 +1,41 @@
+*{
+    margin:0 auto;
+    padding: 0;
+}
+main{
+    width:100%;
+    background-color: blue;
+}
+header{
+    width:100%;
+    height: 150px;
+    background-color: #d2691e;
+}
+footer{
+    width:100%;
+    height: 150px;
+    margin-top: 20px;
+    background-color:darkcyan;
+}
+.content{
+    width:90%;
+    background-color: #faebd7;
+}
+.Carrossel{
+    width:100%;
+    height: 300px;
+    background-color: #dc143c;
+    margin:20px 0;
+}
+.content-card{
+    display: flex;
+    justify-content: space-between;
+    gap:20px;
+    padding: 20px 0 20px 0;
+}
+.card{
+    background-color: #888;
+    width: 100%;
+    height: 250px;
+    padding: 10px;
+}
