@@ -1,5 +1,6 @@
 "use client"
 import Link from "next/link";
+import Image from "next/image";
 
 import linksJson from "./links.json"
 
@@ -14,7 +15,9 @@ const Header = () =>{
         <>
             <header>
                 <div className="content">
-                    <h1>Header</h1>
+                    <Link href="/">
+                        <Image src="/imagens/logo.png" width={150} height={75} alt="Logo" ></Image>
+                    </Link>
                     <ul>
                         {/* <li>
                             <Link href="/Sobre">Sobre</Link>
