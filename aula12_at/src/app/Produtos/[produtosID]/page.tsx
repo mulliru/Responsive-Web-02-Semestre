@@ -10,7 +10,7 @@ const Info = ({ params }) => {
         return (
             <>
                 <div className="content">
-                    <h1>Disco não encontrado</h1>
+                    <h1>Disco não encontrado</h1> 
                 </div>
             </>
         )
