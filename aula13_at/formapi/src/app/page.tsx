@@ -1,3 +1,5 @@
+"use client"
+
 // Importações das bibliotecas necessárias
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useState } from 'react';
