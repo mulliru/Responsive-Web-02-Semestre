@@ -1,5 +1,0 @@
-INDEX VERSION 1.4+C:\Users\logonrmlocal\Desktop\aula de hoje\apiRWD\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-473565446.index
-3821777696.index
-1866561280.index
-2000757613.index
