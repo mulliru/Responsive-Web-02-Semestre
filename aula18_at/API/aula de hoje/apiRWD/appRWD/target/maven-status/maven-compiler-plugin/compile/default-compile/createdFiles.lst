@@ -1,0 +1,5 @@
+br\com\fiap\resource\CorsFilter.class
+br\com\fiap\BO\ProdutoBO.class
+br\com\fiap\DAO\ProdutoDAO.class
+br\com\fiap\resource\ProdutoTO.class
+br\com\fiap\resource\ProdutoResource.class
